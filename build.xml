@@ -24,10 +24,23 @@
 				<include name="**/*.php"/>
 			</fileset>
 		</copy>
+		<!-- Admin/Controller -->
+		<copy todir="${dest}/Controller">
+			<fileset dir="${src}/Controller">
+				<include name="**/*.php"/>
+			</fileset>
+		</copy>
 		<!-- Admin/Model -->
 		<copy todir="${dest}/Model">
 			<fileset dir="${src}/Model">
 				<include name="**/*.php"/>
+			</fileset>
+		</copy>
+		<!-- Admin/View -->
+		<copy todir="${dest}/View">
+			<fileset dir="${src}/View">
+				<include name="**/*.php"/>
+				<include name="**/*.ctp"/>
 			</fileset>
 		</copy>
 		<!-- Admin/webroot -->
