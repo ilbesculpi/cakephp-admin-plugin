@@ -8,5 +8,5 @@ CakeAdminPlugin is a easy-to-use Admin/CMS plugin for CakePHP 2.X
 * Clone/Copy the plugin files into to your `/app/Plugin/Admin` folder.
 * Load the plugin in `/app/Config/bootstrap.php`
 ```php
-	Configure::load('Admin');
+	Configure::load('Admin', array('routes' => true));
 ```
