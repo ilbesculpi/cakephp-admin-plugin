@@ -30,6 +30,10 @@
 				<include name="**/*.php"/>
 			</fileset>
 		</copy>
+		<!-- Admin/webroot -->
+		<copy todir="${dest}/webroot">
+			<fileset dir="${src}/webroot"/>
+		</copy>
 	</target>
 
 </project>
