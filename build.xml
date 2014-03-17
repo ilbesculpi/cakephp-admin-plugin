@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CakeAdminPlugin" default="help">
+
+	<property name="src" value="www/app/Plugin/Admin" />
+	<property name="dest" value="Admin" />
+	
+	<target name="help">
+		<echo>
+	CakeAdminPlugin
+	---------------
+
+	ant copy      - copy files to www dir
+		</echo>
+	</target>
+	
+	<target name="clean">
+		
+	</target>
+	
+	<target name="copy" depends="clean">
+		<!-- Admin/Config -->
+		<copy todir="${dest}/Config">
+			<fileset dir="${src}/Config">
+				<include name="**/*.php"/>
+			</fileset>
+		</copy>
+		<!-- Admin/Model -->
+		<copy todir="${dest}/Model">
+			<fileset dir="${src}/Model">
+				<include name="**/*.php"/>
+			</fileset>
+		</copy>
+	</target>
+
+</project>
