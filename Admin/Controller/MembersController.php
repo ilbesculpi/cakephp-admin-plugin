@@ -11,7 +11,7 @@ class MembersController extends AdminAppController {
 		$this->layout = 'login';
 		if( $this->request->is('post') ) {
 			if( $this->Auth->login() ) {
-				pr( $this->Auth->user('id') ); exit();
+				$this->Member->login( $this->Auth->user('id') );
 				$this->redirect( $this->Auth->redirectUrl() );
 			}
 			else {
@@ -32,6 +32,7 @@ class MembersController extends AdminAppController {
 		if( $this->request->is('post') ) {
 			$this->Member->save( $this->request->data );
 			$this->setFlash('Member created.', 'success');
+			$this->redirect( '/admin/dashboard' );
 		}
 	}
 	

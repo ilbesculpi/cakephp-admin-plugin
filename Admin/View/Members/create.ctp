@@ -10,12 +10,13 @@ $formOptions = array(
 $formFields = array(
 	'name',
 	'email',
-	'password' => array('placeholder' => 'password')
+	'password' => array('placeholder' => 'password'),
+	'status' => array('value' => 1)
 )
 
 ?>
 
-<h1 class="page-header">Create User</h1>
+<h1 class="page-header">Create Member</h1>
 <?php echo $this->Form->create('Member', $formOptions); ?>
 	<?php 
 		foreach($formFields as $field => $options) {

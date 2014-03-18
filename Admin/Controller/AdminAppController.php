@@ -10,12 +10,20 @@ class AdminAppController extends AppController {
 			'loginRedirect' => '/admin/dashboard',
 			'logoutRedirect' => '/admin/login',
 			'loginAction' => '/admin/login',
-			'Form' => array(
-				'userModel' => 'Admin.Member',
-				'fields' => array('username' => 'email')
-			)
 		)
 	);
+	
+	
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->Auth->authenticate = array(
+			AuthComponent::ALL => array(
+				'userModel' => 'Admin.Member', 
+				'fields' => array('username' => 'email')
+			),
+			'Form'
+		);
+	}
 	
 	public function setFlash($message, $type = 'info') {
 		if( $type === 'error' ) $type = 'danger';
