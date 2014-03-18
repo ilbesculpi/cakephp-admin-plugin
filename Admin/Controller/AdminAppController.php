@@ -2,6 +2,8 @@
 
 class AdminAppController extends AppController {
 	
+	public $uses = array('Admin.Member');
+	
 	public $components = array(
 		'Session',
 		'Auth' => array(
