@@ -1,5 +1,4 @@
 <?php
-
 $formOptions = array(
 	'class' => 'form-signin',
 	'role' => 'form',
@@ -9,8 +8,8 @@ $formOptions = array(
 		'class' => 'form-control'
 	)
 );
-
 ?>
+
 <?php echo $this->Form->create('Member', $formOptions); ?>
 	<?php print $this->Session->flash('flash'); ?>
 	<h2 class="form-signin-heading">Please sign in</h2>
