@@ -8,13 +8,18 @@
 		<echo>
 	CakeAdminPlugin
 	---------------
-
+	ant clean     - delete files and folders from [Admin]
 	ant copy      - copy files to www dir
 		</echo>
 	</target>
 	
 	<target name="clean">
-		
+		<delete includeemptydirs="true">
+			<fileset dir="${dest}/Config" includes="**/*"/>
+			<fileset dir="${dest}/Controller" includes="**/*"/>
+			<fileset dir="${dest}/Model" includes="**/*"/>
+			<fileset dir="${dest}/View" includes="**/*"/>
+		</delete>
 	</target>
 	
 	<target name="copy" depends="clean">
