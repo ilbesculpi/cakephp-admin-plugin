@@ -18,4 +18,8 @@ class AdminController extends AdminAppController {
 		}
 	}
 	
+	public function logout() {
+		$this->redirect( $this->Auth->logout() );
+	}
+	
 }
