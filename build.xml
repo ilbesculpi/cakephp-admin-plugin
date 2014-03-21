@@ -29,6 +29,12 @@
 				<include name="**/*.php"/>
 			</fileset>
 		</copy>
+		<!-- Admin/Console -->
+		<copy todir="${dest}/Console">
+			<fileset dir="${src}/Console">
+				<include name="**/*.ctp"/>
+			</fileset>
+		</copy>
 		<!-- Admin/Controller -->
 		<copy todir="${dest}/Controller">
 			<fileset dir="${src}/Controller">
