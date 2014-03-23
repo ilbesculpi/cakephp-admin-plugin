@@ -59,5 +59,37 @@
 			<fileset dir="${src}/webroot"/>
 		</copy>
 	</target>
+	
+	<target name="update">
+		<!-- Admin/Config -->
+		<copy todir="${src}/Config">
+			<fileset dir="${dest}/Config">
+				<include name="**/*.php"/>
+			</fileset>
+		</copy>
+		<!-- Admin/Controller -->
+		<copy todir="${src}/Controller">
+			<fileset dir="${dest}/Controller">
+				<include name="**/*.php"/>
+			</fileset>
+		</copy>
+		<!-- Admin/Model -->
+		<copy todir="${src}/Model">
+			<fileset dir="${dest}/Model">
+				<include name="**/*.php"/>
+			</fileset>
+		</copy>
+		<!-- Admin/View -->
+		<copy todir="${src}/View">
+			<fileset dir="${dest}/View">
+				<include name="**/*.php"/>
+				<include name="**/*.ctp"/>
+			</fileset>
+		</copy>
+		<!-- Admin/webroot -->
+		<copy todir="${src}/webroot">
+			<fileset dir="${dest}/webroot"/>
+		</copy>
+	</target>
 
 </project>
